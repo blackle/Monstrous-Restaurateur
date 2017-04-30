@@ -7,9 +7,12 @@ imgDB = {
 	"mollyHoldingTail": "./img/sloppy_molly_holdingtail.png",
 	"mollyFood": "./img/sloppy_molly_food.png",
 	"mollyChagrin": "./img/sloppy_molly_chagrin.png",
+	"mollyAnyway": "./img/sloppy_molly_anyway.png",
 	"seatedBG": "./img/seated_background.png",
 	"table": "./img/table.png",
 	"tableBroken": "./img/table_broken.png",
+	"burger": "./img/burger.png",
+	"burgerOpened": "./img/burger_opened.png",
 };
 
 sceneDB = {
@@ -228,10 +231,6 @@ sceneDB = {
 	"opt2": {
 		"text": "I thought I heard you calling to a person named raymond to make the cheeze deluxe? right before you called me an asshole to my face?",
 		"func": "seated_food_molly_heartfelt1"
-	},
-	"opt3": {
-		"text": "hold on I'm gonna get a drink first",
-		"func": "seated_food_arrived"
 	}
 },
 
@@ -247,10 +246,6 @@ sceneDB = {
 		"func": "burger_gotted"
 	},
 	"opt2": {
-		"text": "that's no problem, I get it a lot",
-		"func": "seated_food_molly_heartfelt1"
-	},
-	"opt3": {
 		"text": "nervous? do you get nervous often?",
 		"func": "seated_food_molly_heartfelt2"
 	}
@@ -284,7 +279,7 @@ sceneDB = {
 	},
 	"opt2": {
 		"text": "what's a vorabus?",
-		"func": "seated_food_molly_heartfelt2.1.1"
+		"func": "seated_food_molly_vorabus_explained"
 	},
 	"opt3": {
 		"text": "I'm a vorabus!!! and I'm gonna vore that burger!!!",
@@ -332,7 +327,7 @@ sceneDB = {
 	"text": "\"I'm a vorabus.\"",
 	"opt1": {
 		"text": "what's a vorabus?",
-		"func": "seated_food_arrived"
+		"func": "seated_food_molly_vorabus_explained"
 	}
 },
 "seated_food_molly_vorabus_explained": {
@@ -346,17 +341,49 @@ sceneDB = {
 	},
 	"opt2": {
 		"text": "ah! so it makes a lot of sense that you run a restaurant!",
-		"func": "seated_food_molly_vorabus_explained3"
+		"func": "burger_gotted"
 	}
 },
 "seated_food_molly_vorabus_explained2": {
 	"layer1": "seatedBG",
 	"layer2": "mollyChagrin",
 	"layer3": "table",
-	"text": "\"Uhhhhhh that's part of it, not something I've done since college...\"",
+	"text": "\"Uhhhhhh that's part of it, but not something I've done since college...\"",
 	"opt1": {
 		"text": "...",
 		"func": "burger_gotted"
+	}
+},
+
+///burger gotted!!!
+
+"burger_gotted": {
+	"layer1": "seatedBG",
+	"layer2": "mollyAnyway",
+	"layer3": "table",
+	"layer4": "burger",
+	"text": "\"Anyway! I hope you enjoy your burger!\"",
+	"opt1": {
+		"text": "thank you molly!!! I love you!!!",
+		"func": "burger_gotted_opened"
+	},
+	"opt2": {
+		"text": "thank you molly!!! I appreciate you as a culinary professional!!!",
+		"func": "burger_gotted_opened"
+	},
+	"opt3": {
+		"text": "thank you molly!!! I'm gonna vore the fuck out of this burger!!!",
+		"func": "burger_gotted_opened"
+	}
+},
+"burger_gotted_opened": {
+	"layer1": "seatedBG",
+	"layer3": "table",
+	"layer4": "burgerOpened",
+	"text": "<i>Perfect! you made it this far and got your (strangely photorealistic) burger! time to complete the burger eating minigame!</i>",
+	"opt1": {
+		"text": "-->",
+		"func": "burger_gotted_opened"
 	}
 }
 };

@@ -1,0 +1,11 @@
+
+.gameWindow {
+	background-image: url(./img/burger_pieces/drumkit.png);
+	position: relative;
+}
+
+.gameWindow img {
+	position: absolute;
+	display: none;
+	cursor: pointer;
+}
