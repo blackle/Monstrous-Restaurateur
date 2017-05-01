@@ -6,11 +6,18 @@
 		<script src="./burger_game.js"></script>
 	</head>
 	<body onload="onLoad()">
-		<div class="gameWindow" id="layer1">
-			<img id="bun_bottom" src="./img/burger_pieces/bun_bottom.png"/>
-			<img id="patty" src="./img/burger_pieces/patty.png"/>
-			<img id="cheese" src="./img/burger_pieces/cheese.png"/>
-			<img id="bun_top" src="./img/burger_pieces/bun_top.png"/>
+		<div unselectable="on" class="gameWindow" id="layer1">
+			<div id="mollyDance"></div>
+			<img draggable="false" id="bun_bottom" src="./img/burger_pieces/bun_bottom.png"/>
+			<img draggable="false" id="patty" src="./img/burger_pieces/patty.png"/>
+			<img draggable="false" id="cheese" src="./img/burger_pieces/cheese.png"/>
+			<img draggable="false" id="bun_top" src="./img/burger_pieces/bun_top.png"/>
+		</div>
+		<div id="gameText" class="fade">
+			<p id="topGameText"><i>crank out those beats!!</i></p>
+			<ul>
+				<li><a href="./index.html#!burger_gotted_finished" id="opt1"><p>I've had enough</p></a></li>
+			</ul>
 		</div>
 	</body>
 </html>

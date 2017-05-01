@@ -26,6 +26,11 @@ var bunTopTick = 0;
 
 var current_index = 0;
 
+var bass = new Audio("./snd/bass.mp3");
+var tom = new Audio("./snd/tom.mp3");
+var floor = new Audio("./snd/floor.mp3");
+var hit = new Audio("./snd/hit.mp3");
+
 function interpolate(a, b, x) {
 	var x2 = x**3;
 	return a*x2 + b*(1-x2);
@@ -92,11 +97,73 @@ if (current_index < 4) {
 }
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var oldRand = 0;
+
+function randomMolly() {
+	var molly = document.getElementById("mollyDance");
+
+	var newRand = getRandomInt(0,8);
+	if (newRand == oldRand) {
+		newRand = oldRand+1;
+	}
+
+	molly.style.display = "block";
+	molly.style.backgroundPositionX = newRand*165+"px";
+	oldRand = newRand;
+}
+
 function onLoad() {
 	bunBottom = document.getElementById("bun_bottom");
 	cheese = document.getElementById("cheese");
 	patty = document.getElementById("patty");
 	bunTop = document.getElementById("bun_top");
+
+	bunTop.onmousedown = function() {
+		bunTop.style.transform = "rotate(-7deg)";
+		floor.currentTime = 0;
+		floor.play();
+		randomMolly();
+	}
+	bunTop.onmouseup = function() {
+		bunTop.style.transform = "";
+	}
+
+	cheese.onmousedown = function() {
+		cheese.style.transform = "rotate(-7deg)";
+		hit.currentTime = 0;
+		hit.play();
+		randomMolly();
+	}
+	cheese.onmouseup = function() {
+		cheese.style.transform = "";
+	}
+
+	patty.onmousedown = function() {
+		patty.style.transform = "rotate(-7deg)";
+		tom.currentTime = 0;
+		tom.play();
+		randomMolly();
+	}
+	patty.onmouseup = function() {
+		patty.style.transform = "";
+	}
+
+	bunBottom.onmousedown = function() {
+		bunBottom.style.transform = "rotate(7deg)";
+		bass.currentTime = 0;
+		bass.play();
+		randomMolly();
+	}
+	bunBottom.onmouseup = function() {
+		bunBottom.style.transform = "";
+	}
+
 
 	setXYOfAll();
 

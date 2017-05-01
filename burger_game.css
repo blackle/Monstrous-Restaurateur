@@ -4,8 +4,34 @@
 	position: relative;
 }
 
-.gameWindow img {
+.gameWindow, .gameWindow * {
+
+-webkit-user-select: none; /* Chrome/Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+ */
+
+/* Rules below not implemented in browsers yet */
+-o-user-select: none;
+user-select: none;
+}
+
+.gameWindow img, #mollyDance {
 	position: absolute;
 	display: none;
-	cursor: pointer;
+}
+
+.gameWindow img {
+	cursor: pointer;	
+}
+.gameWindow img:hover {
+	filter: brightness(150%);
+}
+
+#mollyDance {
+	top: 10px;
+	left: 100px;
+	background-image: url(./img/molly_dance.png);
+	height: 217px;
+	width: 165px;
+	opacity: 0.75;
 }
