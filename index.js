@@ -61,3 +61,5 @@ function onLoad() {
 		window.location.hash = "!"+window.startScene;
 	}
 }
+
+window.loadSceneFunction = loadScene;
