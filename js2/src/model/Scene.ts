@@ -1,4 +1,4 @@
-#include <model/SceneBase.ts>
+#include "SceneBase.ts"
 
 abstract class Scene extends SceneBase {
 }

@@ -22,7 +22,8 @@ def process_file(file_in_path, file_out):
 		rel = re.search('^#include "([^"]+)"', line)
 		root = re.search('^#include <([^>]+)>', line)
 		if (rel):
-			process_file(rel.group(1), file_out)
+			dirname = os.path.dirname(file_in_path)
+			process_file(dirname + "/" + rel.group(1), file_out)
 		elif (root):
 			process_file(os.getcwd() + "/" + basepath + "/" + root.group(1), file_out)
 		else:
