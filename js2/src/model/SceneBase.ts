@@ -1,6 +1,6 @@
-import { QueuedPainter } from "util/QueuedPainter";
+/// <reference path="../util/QueuedPainter.ts" />
 
-export abstract class SceneBase {
+abstract class SceneBase {
 	protected qp : QueuedPainter;
 	public constructor() {
 		this.qp = new QueuedPainter();

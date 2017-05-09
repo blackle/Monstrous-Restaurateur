@@ -1,4 +1,4 @@
-import { Erina } from "scenes/Erina";
+/// <reference path="../scenes/Erina.ts" />
 
 document.addEventListener("DOMContentLoaded", function() {
 	const canvas = document.getElementById("canvas") as HTMLCanvasElement;

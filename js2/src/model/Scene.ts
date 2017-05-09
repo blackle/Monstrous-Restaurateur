@@ -1,4 +1,4 @@
-import { SceneBase } from "model/SceneBase";
+/// <reference path="../model/SceneBase.ts" />
 
-export abstract class Scene extends SceneBase {
+abstract class Scene extends SceneBase {
 }

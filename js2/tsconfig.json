@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "none",
+        "target": "ES5",
         "strict": true,
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "outFile": "build/main.js",
-        "baseUrl": "./src"
+        "baseUrl": "./src",
+        "outDir": "build"
     },
     "files": [
         "src/main/main.ts"

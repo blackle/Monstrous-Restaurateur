@@ -3,7 +3,7 @@
  * and paints them in order by making a chain of onloads
  */
 
-export class QueuedPainter {
+class QueuedPainter {
 	private queuedImages : Array<HTMLImageElement>;
 	public constructor() {
 		this.queuedImages = new Array<HTMLImageElement>();

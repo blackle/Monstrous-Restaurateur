@@ -1,6 +1,6 @@
-import { Scene } from "model/Scene";
+/// <reference path="../model/Scene.ts" />
 
-export class Erina extends Scene {
+class Erina extends Scene {
 	bg: HTMLImageElement;
 	erina_one: HTMLImageElement;
 	public constructor() {
