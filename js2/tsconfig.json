@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "strict": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "outFile": "build/main.js",
+        "baseUrl": "./src"
+    },
+    "files": [
+        "src/main/main.ts"
+    ]
+}
