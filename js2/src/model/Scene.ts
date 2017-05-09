@@ -1,4 +1,4 @@
-/// <reference path="../model/SceneBase.ts" />
+#include <model/SceneBase.ts>
 
 abstract class Scene extends SceneBase {
 }

@@ -1,4 +1,4 @@
-/// <reference path="../model/Scene.ts" />
+#include <model/Scene.ts>
 
 class Erina extends Scene {
 	bg: HTMLImageElement;

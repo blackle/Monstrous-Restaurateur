@@ -1,4 +1,4 @@
-/// <reference path="../util/QueuedPainter.ts" />
+#include <util/QueuedPainter.ts>
 
 abstract class SceneBase {
 	protected qp : QueuedPainter;
